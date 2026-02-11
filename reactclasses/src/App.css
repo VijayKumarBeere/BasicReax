@@ -1,0 +1,38 @@
+.primary{
+    background-color: green;
+    color:white;
+}
+
+#heading{
+    background-color: red;
+    color: black;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    margin: 20px;
+    padding: 20px;
+    background: wheat;
+    border:2px solid black;
+    width: 200px;
+}
+.box:hover{
+    background-color: beige;
+    cursor: default;
+    color: blue
+}
+
+#children{
+    display: flex;
+    padding: 20px;
+    gap: 50px;
+    margin: 20px;
+    height: 40px;
+    font-family: cursive;
+}
+ /* h1{
+    background-color: green;
+    color: black;
+ } */

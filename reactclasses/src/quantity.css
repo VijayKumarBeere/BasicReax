@@ -1,0 +1,19 @@
+.wrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+button.plus{
+    background-color: red;
+}
+button.minus{
+    background-color: blue;
+}
+.wrapper button{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    border-radius: 4px;
+}
