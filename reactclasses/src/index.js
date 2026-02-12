@@ -1,6 +1,7 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TestEffect from './TestEffect';
+// import TestEffect from './TestEffect';
+import ProductFetch from './ProductFetch';
 // import App from './App';
 // import Header from './header';
 // import Price from './Binding'
@@ -52,7 +53,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <TestEffect></TestEffect>
+    <ProductFetch></ProductFetch>
+    {/* <TestEffect></TestEffect> */}
     {/* <Header></Header>
     {
       isAdmin && <Admin></Admin> //Alternate way of ternary operator.
