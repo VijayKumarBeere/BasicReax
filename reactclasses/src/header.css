@@ -1,0 +1,9 @@
+.list-group{
+    display: flex;
+    list-style-type: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px ;
+    gap: 20px;
+    cursor: pointer;
+}
