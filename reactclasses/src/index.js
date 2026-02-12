@@ -1,7 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import Header from './header';
+import TestEffect from './TestEffect';
+// import App from './App';
+// import Header from './header';
 // import Price from './Binding'
 // import Product from './StateHook';
 // import ColorChange from './Change'
@@ -23,38 +24,39 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //         <p>Para 2</p>
 //  </div>);
 // }
-let isAdmin=true;
-class Menu extends React.Component{
-  render(){
-    // console.log(person);
-    // console.log(x);
-    return (
-      <App className='appButtons'>
-        <button onClick={() => this.displayMessage(10)}>Like</button>
-        <button>Share</button>
-        <button>Subscribe</button>
-      </App>
-      // App()
-      // <App/>
-    )
-  }
-  displayMessage(num) {
-    return alert('Button clicked : ' + num );
-  }
-}
+// let isAdmin=true;
+// class Menu extends React.Component{
+//   render(){
+//     // console.log(person);
+//     // console.log(x);
+//     return (
+//       <App className='appButtons'>
+//         <button onClick={() => this.displayMessage(10)}>Like</button>
+//         <button>Share</button>
+//         <button>Subscribe</button>
+//       </App>
+//       // App()
+//       // <App/>
+//     )
+//   }
+//   displayMessage(num) {
+//     return alert('Button clicked : ' + num );
+//   }
+// }
 
-function Admin(){
-  return(
-    <h3>Admin Dashboard</h3>
-  )
-}
+// function Admin(){
+//   return(
+//     <h3>Admin Dashboard</h3>
+//   )
+// }
 
 root.render(
   <>
-    <Header></Header>
+    <TestEffect></TestEffect>
+    {/* <Header></Header>
     {
       isAdmin && <Admin></Admin> //Alternate way of ternary operator.
-    }
+    } */}
     {/* <Admin></Admin> */}
     
     {/* <Menu>
