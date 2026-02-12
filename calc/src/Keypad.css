@@ -8,7 +8,7 @@ button{
     font-size: larger;
 }
 .digit:hover{
-    background-color: aliceblue;
+    background-color: rgb(204, 203, 203);
 }
 
 .operator{
