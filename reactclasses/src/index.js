@@ -1,7 +1,9 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Test from './RoutingTest';
 // import TestEffect from './TestEffect';
-import ProductFetch from './ProductFetch';
+// import ProductFetch from './ProductFetch';
+// import Access from './AccessStaticFiles';
 // import App from './App';
 // import Header from './header';
 // import Price from './Binding'
@@ -53,8 +55,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <ProductFetch></ProductFetch>
+
+    {/*<ProductFetch></ProductFetch>*/}
     {/* <TestEffect></TestEffect> */}
+    {/* <Access></Access> */}
     {/* <Header></Header>
     {
       isAdmin && <Admin></Admin> //Alternate way of ternary operator.
@@ -69,5 +73,7 @@ root.render(
     {/* <ColorChange></ColorChange> */}
     {/* <Quantity></Quantity> */}
     {/* <ProductDetails></ProductDetails> */}
+
+      <Test></Test>
   </>
 );
