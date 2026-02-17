@@ -1,6 +1,8 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Test from './RoutingTest';
+// import Test from './RoutingTest';
+// import Mapping from './Mapping';
+import TestRef from './TestRef';
 // import TestEffect from './TestEffect';
 // import ProductFetch from './ProductFetch';
 // import Access from './AccessStaticFiles';
@@ -74,6 +76,8 @@ root.render(
     {/* <Quantity></Quantity> */}
     {/* <ProductDetails></ProductDetails> */}
 
-      <Test></Test>
+      {/* <Test></Test> */}
+      {/* <Mapping></Mapping> */}
+      <TestRef></TestRef>
   </>
 );
