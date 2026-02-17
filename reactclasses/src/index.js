@@ -2,7 +2,9 @@
 import ReactDOM from 'react-dom/client';
 // import Test from './RoutingTest';
 // import Mapping from './Mapping';
-import TestRef from './TestRef';
+// import TestRef from './TestRef';
+// import MultiRef from './MultiTestRef';
+import CustomTest from './CustomHookTest';
 // import TestEffect from './TestEffect';
 // import ProductFetch from './ProductFetch';
 // import Access from './AccessStaticFiles';
@@ -78,6 +80,8 @@ root.render(
 
       {/* <Test></Test> */}
       {/* <Mapping></Mapping> */}
-      <TestRef></TestRef>
+      {/* <TestRef></TestRef> */}
+      {/* <MultiRef></MultiRef> */}
+      <CustomTest></CustomTest>
   </>
 );
