@@ -1,10 +1,14 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
+import TestMemo from './TestMemo';
+// import Parent from './Parent';
+// import { createContext } from 'react';
+
 // import Test from './RoutingTest';
 // import Mapping from './Mapping';
 // import TestRef from './TestRef';
 // import MultiRef from './MultiTestRef';
-import CustomTest from './CustomHookTest';
+// import CustomTest from './CustomHookTest';
 // import TestEffect from './TestEffect';
 // import ProductFetch from './ProductFetch';
 // import Access from './AccessStaticFiles';
@@ -57,6 +61,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   )
 // }
 
+// let order={
+//   id:25,
+//   name:'Vijay',
+//   price: 3500
+// }
+// export const context = createContext();
 root.render(
   <>
 
@@ -82,6 +92,10 @@ root.render(
       {/* <Mapping></Mapping> */}
       {/* <TestRef></TestRef> */}
       {/* <MultiRef></MultiRef> */}
-      <CustomTest></CustomTest>
+      {/* <CustomTest></CustomTest> */}
+      {/* <context.Provider value={order}>
+        <Parent></Parent>
+      </context.Provider> */}
+      <TestMemo></TestMemo>
   </>
 );
