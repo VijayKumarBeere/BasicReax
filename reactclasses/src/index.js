@@ -1,7 +1,8 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import TestMemo from './TestMemo';
-import TestAccess from './TestAccess';
+// import TestAccess from './TestAccess';
+import Cycle from './Cycle';
 // import Parent from './Parent';
 // import { createContext } from 'react';
 
@@ -98,6 +99,7 @@ root.render(
         <Parent></Parent>
       </context.Provider> */}
       {/* <TestMemo></TestMemo> */}
-      <TestAccess></TestAccess>
+      {/* <TestAccess></TestAccess> */}
+      <Cycle></Cycle>
   </>
 );
