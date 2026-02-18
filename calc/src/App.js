@@ -33,7 +33,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h4 style={{fontFamily:'serif', fontWeight:'bolder'}}>CALCULATOR</h4>
+      <h4 className='text-primary' style={{fontFamily:'serif', fontWeight:'bolder'}}>CALCULATOR</h4>
       <div className='calc'>
         <input type="text" id='inputText' value={input}/>
         <Keypad allow={AllowInput} clear={ClearInput} equals={Evaluate} back={AllowBack}></Keypad>
