@@ -1,6 +1,7 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TestMemo from './TestMemo';
+// import TestMemo from './TestMemo';
+import TestAccess from './TestAccess';
 // import Parent from './Parent';
 // import { createContext } from 'react';
 
@@ -96,6 +97,7 @@ root.render(
       {/* <context.Provider value={order}>
         <Parent></Parent>
       </context.Provider> */}
-      <TestMemo></TestMemo>
+      {/* <TestMemo></TestMemo> */}
+      <TestAccess></TestAccess>
   </>
 );
