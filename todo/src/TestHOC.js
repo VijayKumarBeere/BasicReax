@@ -10,22 +10,29 @@ import React from 'react';
 //     }
 // }
 
-function User({username, age}){
+function User(props){
     return(
         <>
             <h2>User Component</h2>
-            <h3>User Name:{username}</h3>
-            <h4>Age: {age}</h4>
+            <h3>User Name:{props.username}</h3>
+            <h4>Age: {props.age}</h4>
         </>
     )
 }
 
+//defaultProps is no longer officially supported for function components in modern React.
+//The React team (React) has deprecated this pattern.
+User.defaultProps = {
+    username: 'NA',
+    age: 'NA'
+};
+
 //Prop Type warnings are not showing from react version 19.
 //PropTypes is now considered legacy for runtime validation.
-User.propTypes = {
+User.propTypes ={
     username: PropTypes.string.isRequired,
     age: PropTypes.number
-};
+}
 
 // function Login(){
 //     return(
@@ -40,7 +47,7 @@ User.propTypes = {
 function HOC(){
     return(
         <>
-            <User age = {24}></User>
+            <User />
         </>
     )
 }
