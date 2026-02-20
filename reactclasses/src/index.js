@@ -2,11 +2,11 @@
 import ReactDOM from 'react-dom/client';
 // import TestMemo from './TestMemo';
 // import TestAccess from './TestAccess';
-import Cycle from './Cycle';
+// import Cycle from './Cycle';
 // import Parent from './Parent';
 // import { createContext } from 'react';
 
-// import Test from './RoutingTest';
+import Test from './RoutingTest';
 // import Mapping from './Mapping';
 // import TestRef from './TestRef';
 // import MultiRef from './MultiTestRef';
@@ -90,7 +90,7 @@ root.render(
     {/* <Quantity></Quantity> */}
     {/* <ProductDetails></ProductDetails> */}
 
-      {/* <Test></Test> */}
+      <Test></Test>
       {/* <Mapping></Mapping> */}
       {/* <TestRef></TestRef> */}
       {/* <MultiRef></MultiRef> */}
@@ -100,6 +100,6 @@ root.render(
       </context.Provider> */}
       {/* <TestMemo></TestMemo> */}
       {/* <TestAccess></TestAccess> */}
-      <Cycle></Cycle>
+      {/* <Cycle></Cycle> */}
   </>
 );
