@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 // import Product from "./Product-card";
 import './Product-card.css'
-// import axios from 'axios';
+import axios from 'axios';
 function Products(){
     let [cards, setCards] = useState([]);
-    // let rootAPI = axios.create({
-    //         baseURL:'https://fakestoreapi.com'
-    //     }
-    // );
+    let rootAPI = axios.create({
+            baseURL:'https://fakestoreapi.com'
+        }
+    );
 
     useEffect(
-        () => getProducts(),[]
+        () => {
+            getProducts()
+        },[]
     )
 
-    function addProduct(){
+    async function addProduct(){
         // const product = { title: 'New Product', price: 29.99, description:'', category:'', image:"#", rating:{
         //     count:4.2,
         //     rate: 4.0
@@ -28,10 +30,14 @@ function Products(){
         //     console.log(data)
         // })
 
+        // const ax= require('axios');
+        await rootAPI.post('/products',{
+            title: 'New Product', price: 29.99
+        }).then(response=>console.log(response.data));
         
     }
 
-    function removeProduct(id){
+    async function removeProduct(id){
         // fetch('https://fakestoreapi.com/products/'+id, {
         //     method: 'DELETE'
         //     })
@@ -41,19 +47,22 @@ function Products(){
         //         console.log(details);
         //         setCards(details);
         //     });
+        let res = await rootAPI.delete('/products/'+id);
+        console.log(res.data);
+        setCards(prev=>(prev.filter(product=>product.id!==res.data.id)));
     }
 
     async function getProducts(){
-        fetch('https://fakestoreapi.com/products')
-            .then(resp=>resp.json())
-            .then(data=>{
-                console.log(data);
-                setCards(data)
-            });
-        // console.log('getProducts')
-        // let res = await rootAPI.get('/products');
+        // fetch('https://fakestoreapi.com/products')
+        //     .then(resp=>resp.json())
+        //     .then(data=>{
+        //         console.log(data);
+        //         setCards(data)
+        //     }
+        // );
+        let res = await rootAPI.get('/products');
         // console.log(res.data);
-        // setCards(res.data)
+        setCards(res.data)
     }
 
     return(

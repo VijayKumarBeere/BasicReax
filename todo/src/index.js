@@ -4,14 +4,16 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Login from './Login';
-import Products from './Products';
+// import Products from './Products';
+import Contact from './contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Login></Login> */}
-    <Products></Products>
+    {/* <Products></Products> */}
+    <Contact></Contact>
   </React.StrictMode>
 );
 
