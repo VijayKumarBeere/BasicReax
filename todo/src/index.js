@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 // import Login from './Login';
 // import Products from './Products';
 // import Contact from './contact';
-import HOC from './TestHOC';
+// import HOC from './TestHOC';
+import App from './TestPortal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,8 @@ root.render(
     {/* <Products></Products> */}
     {/* <Contact></Contact> */}
 
-    <HOC></HOC>
+    {/* <HOC></HOC> */}
+    <App></App>
   </React.StrictMode>
 );
 
