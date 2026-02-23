@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <button onclick=putData()>Put</button>
+    <!-- <button onclick=postData()>Post</button> -->
+    <button onclick=getData()>Get</button>
+    <button onclick=deleteData()>Delete</button>
+
+
+</head>
+<body>
+    <script>
+        async function postData(){
+            fetch('http://localhost:4200/products',{
+                method: "POST",
+                body: JSON.stringify({
+                    "name": "iPhone 16 Pro Max",
+                    "price": 89000
+                }),
+                headers:{
+                    "content-type":"application/json"
+                }
+            }).then(res=>res.json()).then(data=>console.log(data));
+        }
+        async function putData(){
+            fetch('http://localhost:4200/products/3',{
+                method: 'PUT',
+                body: JSON.stringify({
+                    "name": "Vivo v21 Max",
+                    "price": 114000
+                }),
+                headers:{
+                    "content-type":"application/json"
+                }
+            }).then(res=>res.json()).then(data=>console.log(data));
+        }
+
+        async function deleteData() {
+            fetch('http://localhost:4200/products/3',{
+                method: 'DELETE'
+            }).then(res=>res.json()).then(data=>console.log(data));
+        }
+        async function getData(){
+            fetch('http://localhost:4200/products').then(res=>res.json()).then(data=>console.log(data))
+        }
+        async function getData(id){
+            fetch('http://localhost:4200/products'+id).then(res=>res.json()).then(data=>console.log(data))
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "iPhone 16 Pro Max",
+      "price": 89000
+    },
+    {
+      "name": "Samsung s24 FE",
+      "price": 72000,
+      "id": 3
+    }
+  ]
+}
