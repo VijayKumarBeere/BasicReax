@@ -1,3 +1,36 @@
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-overlay{
+    position: absolute;
+    padding: 20px;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+form{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 2px 2px 8px black;
+}
+
+form button{
+  margin: 20px 5px;
+  padding: 10px;
+}
 /* .App {
   text-align: center;
 }

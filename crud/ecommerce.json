@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "iQOO Z7 Ultra fold",
+      "price": 55000,
+      "id": 4,
+      "category": "mobiles"
+    },
     {
+      "name": "Samsung s24 FE",
+      "price": 72000,
+      "id": 3,
+      "category": "mobiles"
+    },
+    {
+      "name": "iPhone 17 Pro",
+      "price": 89000,
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "category": "accessories"
+    },
+    {
+      "name": "Realme X7 Pro",
+      "price": 35000,
+      "id": 2,
+      "category": "mobiles"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
