@@ -25,7 +25,7 @@ function Reducer(){
 
         </div>
         <div className="text-center">
-            <button className="btn btn-danger" onClick={()=>{
+            <button className="btn btn-danger mt-3" onClick={()=>{
                 dispatch({type:'RESET'})
             }}>Reset</button>
         </div>
