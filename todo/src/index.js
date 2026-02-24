@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 // import Products from './Products';
 // import Contact from './contact';
 // import HOC from './TestHOC';
-import App from './TestPortal';
+// import App from './TestPortal';
+import Reducer from './TestReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,8 @@ root.render(
     {/* <Contact></Contact> */}
 
     {/* <HOC></HOC> */}
-    <App></App>
+    {/* <App></App> */}
+    <Reducer></Reducer>
   </React.StrictMode>
 );
 
