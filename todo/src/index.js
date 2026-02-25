@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 // import HOC from './TestHOC';
 // import App from './TestPortal';
 import Reducer from './TestReducer';
+import TestRedux from './TestRedux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +21,8 @@ root.render(
 
     {/* <HOC></HOC> */}
     {/* <App></App> */}
-    <Reducer></Reducer>
+    {/* <Reducer></Reducer> */}
+    <TestRedux></TestRedux>
   </React.StrictMode>
 );
 
