@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Deposit, Reset, UpdateMobile, UpdateName, Withdraw } from "./actions";
 
 
 function Form(){
@@ -20,14 +21,14 @@ function Form(){
                 </div>
                 <button className="btn btn-primary col-2" onClick={
                     ()=>{
-                        dispatch({type:'deposit', payload:amount})
+                        dispatch(Deposit(amount))
                         setAmount('');
                     }
                 }>Deposit</button>
                 <button className="btn btn-light border-secondary d-flex justify-content-center col-2 mx-2"
                 onClick={
                     ()=>{
-                        dispatch({type:'withdraw', payload:amount});
+                        dispatch(Withdraw(amount));
                         setAmount('');
                     }
                 }>Withdraw</button>
@@ -42,7 +43,7 @@ function Form(){
                 </div>
                 <button className="btn btn-primary col-2" onClick={
                     ()=>{
-                        dispatch({type:'nameUpdate',payload:name});
+                        dispatch(UpdateName(name));
                         setName('');
                     }
                 }>Update</button>
@@ -57,7 +58,7 @@ function Form(){
                 </div>
                 <button className="btn btn-primary col-2" onClick={
                     ()=>{
-                        dispatch({type:'mobileUpdate',payload:mobile});
+                        dispatch(UpdateMobile(mobile));
                         setMobile('');
                     }
                 }>Update</button>
@@ -65,7 +66,7 @@ function Form(){
             <div className="row justify-content-center w-75 mt-3">
                 <button className="btn btn-danger col-1" onClick={
                     ()=>{
-                        dispatch({type:'reset'})
+                        dispatch(Reset())
                     }
                 }>Reset</button>
             </div>
