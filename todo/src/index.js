@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import App from './Application';
+import store from './store';
 // import Login from './Login';
 // import Products from './Products';
 // import Contact from './contact';
 // import HOC from './TestHOC';
 // import App from './TestPortal';
-import Reducer from './TestReducer';
-import TestRedux from './TestRedux';
+// import Reducer from './TestReducer';
+// import TestRedux from './TestRedux';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +26,10 @@ root.render(
     {/* <HOC></HOC> */}
     {/* <App></App> */}
     {/* <Reducer></Reducer> */}
-    <TestRedux></TestRedux>
+    {/* <TestRedux></TestRedux> */}
+    <Provider store={store}>
+      <App></App>
+    </Provider>
   </React.StrictMode>
 );
 
