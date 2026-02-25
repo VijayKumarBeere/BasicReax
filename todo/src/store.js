@@ -36,6 +36,8 @@ function transactionDispatcher(state=[],action){
                 Type: action.payload.Type, 
                 date: action.payload.date 
             }];
+        case 'reset':
+            return [];
         default:
             return state;
     }
