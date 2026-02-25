@@ -1,4 +1,5 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+
 
 const defState={
     balance:0,
@@ -25,7 +26,27 @@ function accountDispatcher(state=defState,action){
     }
 }
 
-const store = createStore(accountDispatcher);
+function transactionDispatcher(state=[],action){
+    switch(action.type){
+        case 'Credit':
+        case 'Debit':
+            return [...state,{
+                id:action.payload.id,
+                amount: action.payload.amount, 
+                Type: action.payload.Type, 
+                date: action.payload.date 
+            }];
+        default:
+            return state;
+    }
+}
+
+let rootReducer = combineReducers({
+    account: accountDispatcher,
+    statement: transactionDispatcher
+})
+
+const store = createStore(rootReducer);
 // store.subscribe(()=>{
 //     console.log(store.getState())
 // })

@@ -4,8 +4,10 @@ import './Application.css'
 function App(){
     return(
         <>
-        <Form></Form>
-        <Account></Account>
+        <div className="w-75 m-3 mx-auto justify-content-center align-items-center border border-secondary rounded">
+            <Form></Form>
+            <Account></Account>
+        </div>
         </>
     )
 }

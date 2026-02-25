@@ -17,3 +17,23 @@ export function UpdateMobile(mobile){
 export function Reset(){
     return {type:'reset'};
 }
+
+export function Credit(amount,tranId){
+    return {type:'Credit',payload:{
+        id: tranId,
+        amount: amount,
+        date: new Date(),
+        Type: 'Credit'
+    }};
+}
+
+export function Debit(amount,tranId){
+    return{
+        type:'Debit',payload:{
+            id: tranId,
+            amount: amount,
+            date: new Date(),
+            Type: 'Debit'
+    }
+    }
+}
