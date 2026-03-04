@@ -4,16 +4,18 @@
 import './App.css'
 import Account from './Account'
 import Form from './Form'
+import Users from './Users'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='border border-secondary rounded-4'>
+      {/* <div className='border border-secondary rounded-4'>
       <Form/>
       <Account/>
-      </div>
+      </div> */}
+      <Users></Users>
     </>
   )
 }
