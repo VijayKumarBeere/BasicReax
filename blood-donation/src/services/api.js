@@ -21,28 +21,32 @@ export const donorsApi = {
     try {
       const donors = await request('/donors')
       return donors.map((donor) => ({ ...donor, fullName: donor.fullName || donor.name }))
-    } catch {
-      return demoDonors
+    } catch (error) {
+      console.error('Failed to fetch donors from API, returning demo donors.', error)
+      return []
     }
   },
   async create(donor) {
     try {
       return await request('/donors', { method: 'POST', body: JSON.stringify(donor) })
-    } catch {
+    } catch (error) {
+      console.error('Failed to create donor.', error)
       return { ...donor, id: Date.now() }
     }
   },
   async update(id, donor) {
     try {
       return await request(`/donors/${id}`, { method: 'PUT', body: JSON.stringify(donor) })
-    } catch {
+    } catch (error) {
+      console.error('Failed to update donor.', error)
       return { ...donor, id }
     }
   },
   async remove(id) {
     try {
       await request(`/donors/${id}`, { method: 'DELETE' })
-    } catch {
+    } catch (error) {
+      console.error('Failed to delete donor.', error)
       return id
     }
     return id
