@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || '/api'
+const API_URL = '/api'
 
 const demoDonors = [
   { id: 1, fullName: 'Maya Patel', mobile: '+91 98765 43210', email: 'maya@example.com', age: 29, bloodType: 'O-', city: 'Bengaluru'},
@@ -22,33 +22,33 @@ export const donorsApi = {
       const donors = await request('/donors')
       return donors.map((donor) => ({ ...donor, fullName: donor.fullName || donor.name }))
     } catch (error) {
-      //console.error('Failed to fetch donors from API, returning demo donors.', error)
-      //return []
-      return demoDonors
+      console.error('Failed to fetch donors from API, returning demo donors.', error)
+      return []
+      // return demoDonors
     }
   },
   async create(donor) {
     try {
       return await request('/donors', { method: 'POST', body: JSON.stringify(donor) })
     } catch (error) {
-      //console.error('Failed to create donor.', error)
-      return { ...donor, id: Date.now() }
+      console.error('Failed to create donor.', error)
+      // return { ...donor, id: Date.now() }
     }
   },
   async update(id, donor) {
     try {
       return await request(`/donors/${id}`, { method: 'PUT', body: JSON.stringify(donor) })
     } catch (error) {
-      //console.error('Failed to update donor.', error)
-      return { ...donor, id }
+      console.error('Failed to update donor.', error)
+      // return { ...donor, id }
     }
   },
   async remove(id) {
     try {
       await request(`/donors/${id}`, { method: 'DELETE' })
     } catch (error) {
-      //console.error('Failed to delete donor.', error)
-      return id
+      console.error('Failed to delete donor.', error)
+      // return id
     }
     return id
   },

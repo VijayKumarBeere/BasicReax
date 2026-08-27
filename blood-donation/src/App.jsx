@@ -5,7 +5,7 @@ import DonorDetails, { DonorFields } from './components/DonorDetails'
 import './App.css'
 
 const navItems = ['Overview', 'Donor directory', 'Requests', 'Locations']
-const emptyForm = { fullName: '', mobile: '', email: '', age: '', bloodType: 'O+', city: '' }
+const emptyForm = { fullName: '', mobile: '', email: '', age: '', bloodType: 'O+', city: '', lastDonation: '', available: true }
 
 function App() {
   const dispatch = useDispatch()
